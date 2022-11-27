@@ -61,7 +61,7 @@ def medicine_choice():
 
 
 def service_choice(insurance_discount, pay_choice):
-    final_choice = 0
+    final_choice = 0.0
     multi = ['a', 'b', 'c', 'd']
     print("\n")
     print("************ Enter the service that used ************\n")
@@ -92,6 +92,10 @@ def service_choice(insurance_discount, pay_choice):
         elif user_choice_services.lower() == 'q':  # WIP update so user will not crash program with invalid value -matt
             print("Thank you for your selection")
             break
+        else:
+            print("Not a valid choice")
+            continue
+        print(final_choice)
     print(final_choice)
 
     while pay_choice.lower() == 'n':
@@ -116,12 +120,17 @@ def service_choice(insurance_discount, pay_choice):
         elif user_choice_services.lower() == 'q':  # WIP update so user will not crash program with invalid value -matt
             print("Thank you for your selection")
             break
+        else:
+            print("Not a valid input try again!")
+            continue
         print(final_choice)
-
+    print(final_choice)
 
     # outputs correctly make it easier to read WIP
-    # sum = final_choice * 450
-    # print(f"this is the sum {sum}")
+    days = float(input("enter days"))
+    days_price = 450.0 * days
+    sum_total = final_choice * days_price
+    print(f"this is the sum {sum_total}")
 
 
 def final_statement(today):
