@@ -1,6 +1,4 @@
-# from colorama import init
-# from termcolor import colored
-# import emoji
+# Matt McCarthy & Kevin Alves 12/6/22 COP1000-1
 import datetime
 import random
 import time
@@ -308,15 +306,15 @@ def outpatient():
 
 
 # This is the where the user inputs a choice
-def greeting(user_1, user_2, time_now):
+def greeting(user_1_firstname, user_1_lastname, user_2_firstname, user_2_lastname, time_now):
     print("Welcome to a hospital project for _____ children hospital\nEnter 'd' to refer to documentation before going "
           "further! Enjoy\n")
-    print(f"Written by {user_1} and {user_2} {time_now}\n\n")
+    print(f"Written by {user_1_firstname} {user_1_lastname} and {user_2_firstname} {user_2_lastname} {time_now}\n\n")
 
 
 def main():
     print(art_1)
-    greeting("Matt", "Kevin", datetime.date(2022, 11, 23))
+    greeting("Matt", "McCarthy", "Kevin", "Alves", datetime.date(2022, 11, 23))
 
     userChoice = input("Enter i for Inpatient o for Outpatient: ")
     userChoice = userChoice.lower()
@@ -339,4 +337,3 @@ if __name__ == "__main__":
         main()
     except EnvironmentError:
         print("Not a valid program")
-
